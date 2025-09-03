@@ -1,0 +1,220 @@
+/* --- 1. Estilos Generales y Variables de Color --- */
+:root {
+    --color-primario: #e08a57;
+    --color-secundario: #2A363B;
+    --color-fondo: #979797;
+    --color-blanco: #FFFFFF;
+}
+
+/* Selector de TIPO: afecta a todo el cuerpo de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #253629;
+    line-height: 1.6;
+
+    /* --- PROPIEDADES PARA LA IMAGEN DE FONDO --- */
+    background-image: url('Imagenes_Web/Backgound.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* --- 2. Encabezado y Navegación --- */
+
+.encabezado-principal {
+    background-color: var(--color-blanco);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--color-primario);
+}
+
+.logo img {
+    max-height: 200px;
+}
+
+.menu-navegacion ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-navegacion li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.menu-navegacion a {
+    text-decoration: none;
+    color: var(--color-secundario);
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 5px;
+    transition: color 0.5s ease, border-bottom-color 0.3s ease;
+}
+
+/* INTERACTIVIDAD: Efecto al pasar el ratón sobre los enlaces */
+.menu-navegacion a:hover {
+    color: var(--color-primario);
+    border-bottom: 2px solid var(--color-primario);
+}
+
+/* La clase 'activo' marca la página actual en el menú */
+.menu-navegacion a.activo {
+    color: var(--color-primario);
+    border-bottom: 2px solid var(--color-primario);
+}
+
+/* --- 3. Contenido Principal y Secciones --- */
+.contenido {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Selector por ID: Estilos para la sección principal de la página de inicio */
+#hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--color-blanco);
+    border-radius: 8px;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+    color: var(--color-secundario);
+}
+
+#hero p {
+    font-size: 1.2em;
+    color: #1d1d1d;
+}
+
+/* --- 4. Botones Interactivos --- */
+.boton {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton:hover {
+    background-color: #e02d00;
+    transform: translateY(-3px);
+}
+
+/* --- 5. Tarjetas de Productos --- */
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.tarjeta-servicio {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0; 
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+
+}
+.tarjeta-servicio img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Cambia esta línea */
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.tarjeta-servicio h3 {
+    color: var(--color-primario);
+}
+
+/* --- 6. Formulario de Contacto --- */
+.formulario {
+    background-color: var(--color-blanco);
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.campo-formulario {
+    margin-bottom: 20px;
+}
+
+.campo-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Selectores de tipo para los campos del formulario */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* --- 7. Pie de Página --- */
+.pie-pagina {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+/* --- Estilos para el título de la sección de productos --- */
+#servicios-lista h2 {
+    display: inline-block;
+    background-color: var(--color-blanco);
+    color: var(--color-secundario);
+    padding: 15px 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+#formulario-contacto {
+    text-align: center;
+}
+
+#formulario-contacto h2 {
+    display: inline-block;
+    background-color: rgba(42, 54, 59, 0.65); 
+    color: var(--color-blanco);
+    padding: 10px 30px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#formulario-contacto p {
+    display: inline-block;
+    background-color: rgba(0, 90, 156, 0.65);
+    color: var(--color-blanco);
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 550px;
+}
